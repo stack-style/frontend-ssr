@@ -1,0 +1,32 @@
+{
+  "name": "stacker-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:client-build": "webpack --config webpack.client.js --mode development --watch",
+    "dev:server-build": "webpack --config webpack.server.js --mode development --watch",
+    "dev:server-start": "nodemon --watch dist --exec \"node dist/main.js\"",
+    "start": "npm-run-all --parallel dev:*"
+  },
+  "keywords": [],
+  "author": "Vivek Singh <vivekonline01@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "nodemon": "^1.18.7",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
+  }
+}
