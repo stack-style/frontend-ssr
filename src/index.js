@@ -14,6 +14,7 @@ app.get('*', function(req, res) {
   <html>
   <head>
     <title>Stack Sticker</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <div id="app">${content}</div>

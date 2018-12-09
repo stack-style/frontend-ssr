@@ -3,11 +3,15 @@
  */
 const path = require('path');
 const merge = require('webpack-merge');
+const nodeExternals = require('webpack-node-externals');
 const common = require('./webpack.common');
 
 const serverConfig = {
+  name: 'server',
   target: 'node',
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js'
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname + '/dist')
