@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:client-build": "webpack --config webpack.client.js --mode development --watch",
-    "dev:server-build": "webpack --config webpack.server.js --mode development --watch",
-    "dev:server-start": "nodemon --watch dist --exec \"node dist/main.js\"",
-    "start": "npm-run-all --parallel dev:*"
+    "build-client": "webpack --config webpack.client.js --mode development --watch",
+    "build-server": "webpack --config webpack.server.js --mode development --watch",
+    "server-start": "nodemon -L --watch dist dist/main.js",
+    "start": "npm run build-server & npm run build-client & npm run server-start"
   },
   "keywords": [],
   "author": "Vivek Singh <vivekonline01@gmail.com>",
